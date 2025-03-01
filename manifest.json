@@ -1,0 +1,15 @@
+{
+    "name": "Emotion Development Validator",
+    "version": "1.0.0",
+    "author": "Claude",
+    "description": "监控角色情感发展合理性，基于角色卡和世界信息评估情感变化是否自然",
+    "tags": ["emotion", "character", "moderation", "roleplay", "world-info"],
+    "homepage": "https://github.com/yourusername/Emotion-Development-Validator",
+    "repository": "https://github.com/yourusername/Emotion-Development-Validator",
+    "license": "MIT",
+    "js": "index.js",
+    "css": "style.css",
+    "dependencies": {
+        "SillyTavern": ">=1.9.0"
+    }
+}
