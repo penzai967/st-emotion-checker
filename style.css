@@ -1,0 +1,234 @@
+/* Emotion Development Validator 插件样式 */
+
+/* 设置面板样式 */
+.emotion-validator-settings {
+    margin: 10px 0;
+}
+
+.emotion-validator-settings .flex-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.emotion-validator-settings label {
+    margin-right: 10px;
+}
+
+.emotion-validator-settings input[type="range"] {
+    margin: 0 10px;
+}
+
+.emotion-validator-settings textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 60px;
+    font-family: monospace;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--SmartThemeInputColor, #0b0f19);
+    color: var(--SmartThemeTextColor, #ffffff);
+    border: 1px solid var(--SmartThemeBorderColor, #444);
+}
+
+/* 情感警告弹窗样式 */
+.emotion-warning-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.emotion-warning-content {
+    background-color: var(--SmartThemeShadowColor, #0b0f19);
+    border: 2px solid var(--SmartThemeBodyColor, #f44336);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    color: var(--SmartThemeTextColor, #ffffff);
+}
+
+.emotion-warning-content h3 {
+    color: var(--SmartThemeBodyColor, #f44336);
+    margin-top: 0;
+    text-align: center;
+}
+
+.emotion-warning-content .warning-level {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.warning-level-mild {
+    background-color: #FFC107;
+    color: #000;
+}
+
+.warning-level-moderate {
+    background-color: #FF9800;
+    color: #000;
+}
+
+.warning-level-severe {
+    background-color: #F44336;
+    color: #fff;
+}
+
+.emotion-warning-details {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.emotion-warning-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.emotion-warning-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#emotion_warning_edit {
+    background-color: var(--SmartThemeBodyColor, #f44336);
+    color: white;
+}
+
+#emotion_warning_ignore {
+    background-color: #555;
+    color: white;
+}
+
+#emotion_warning_edit:hover {
+    background-color: #d32f2f;
+}
+
+#emotion_warning_ignore:hover {
+    background-color: #777;
+}
+
+/* 状态指示器样式 */
+.emotion-validator-status {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.emotion-validator-status.active {
+    background-color: #4CAF50;
+}
+
+.emotion-validator-status.warning {
+    background-color: #FFC107;
+}
+
+.emotion-validator-status.error {
+    background-color: #F44336;
+}
+
+/* 情感跟踪面板样式 */
+.emotion-tracker-panel {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 300px;
+    background-color: var(--SmartThemeShadowColor, #0b0f19);
+    border: 1px solid var(--SmartThemeBorderColor, #444);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 999;
+    display: none;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.emotion-tracker-panel h3 {
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px solid var(--SmartThemeBorderColor, #444);
+    padding-bottom: 5px;
+}
+
+.emotion-tracker-entry {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.emotion-tracker-entry .character-name {
+    font-weight: bold;
+    color: var(--SmartThemeBodyColor, #f44336);
+}
+
+.emotion-tracker-entry .emotion-state {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.emotion-tracker-entry .emotion-change {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* 工具提示样式 */
+.emotion-validator-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: help;
+}
+
+.emotion-validator-tooltip .tooltip-icon {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.emotion-validator-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.emotion-validator-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
